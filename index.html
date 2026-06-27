@@ -4,78 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Wayne - Buscador inteligente de cursos gratuitos." />
+  <meta name="theme-color" content="#07111f" />
   <title>Wayne | Cursos Gratuitos</title>
-  <style>
-    :root { --bg:#050b14; --panel:#0b1728; --panel2:#10233d; --text:#eef7ff; --muted:#9fb3c8; --blue:#20a7ff; --cyan:#78f0ff; --green:#72db5a; --yellow:#ffd74a; --line:#244d72; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text); background: radial-gradient(circle at top right, #123a66 0%, #07111f 38%, #03060b 100%); min-height:100vh; }
-    header { padding:28px 20px 18px; border-bottom:1px solid rgba(120,240,255,.2); background:linear-gradient(90deg, rgba(32,167,255,.16), transparent); }
-    .hero { max-width:1100px; margin:auto; display:grid; gap:22px; }
-    .brand { display:flex; align-items:center; gap:14px; }
-    .logo { width:62px; height:62px; border:3px solid var(--blue); border-radius:50%; display:grid; place-items:center; font-size:30px; box-shadow:0 0 25px rgba(32,167,255,.45); }
-    h1 { font-size:48px; margin:0; letter-spacing:-1px; }
-    .tag { color:var(--muted); text-transform:uppercase; letter-spacing:2px; font-size:13px; }
-    .pitch { font-size:20px; max-width:780px; color:#d5eaff; line-height:1.45; margin:0; }
-    .searchbox { display:grid; grid-template-columns:1fr auto; gap:10px; background:rgba(11,23,40,.82); border:1px solid var(--line); padding:12px; border-radius:18px; }
-    input, select { width:100%; padding:15px 14px; border-radius:12px; border:1px solid #28577f; background:#06101d; color:var(--text); font-size:16px; outline:none; }
-    button { border:0; border-radius:12px; padding:0 22px; font-size:16px; font-weight:800; color:#04101d; background:linear-gradient(90deg,var(--cyan),var(--blue)); cursor:pointer; }
-    main { max-width:1100px; margin:0 auto; padding:20px; }
-    .chips { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0; }
-    .chip { padding:9px 12px; border:1px solid var(--line); border-radius:999px; color:#d9edff; background:rgba(16,35,61,.75); cursor:pointer; font-size:13px; }
-    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:18px 0; }
-    .stat, .panel { background:linear-gradient(180deg,rgba(16,35,61,.92),rgba(7,17,31,.94)); border:1px solid var(--line); border-radius:16px; padding:16px; }
-    .stat b { display:block; font-size:28px; color:white; }
-    .stat span { color:var(--muted); font-size:12px; }
-    .filters { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin:14px 0; }
-    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
-    .course { position:relative; background:linear-gradient(180deg,rgba(11,23,40,.98),rgba(7,13,24,.98)); border:1px solid rgba(120,240,255,.25); border-radius:18px; padding:18px; box-shadow:0 12px 28px rgba(0,0,0,.24); }
-    .course h3 { margin:0 48px 8px 0; color:var(--yellow); font-size:18px; }
-    .course p { color:#c7d8e8; line-height:1.45; margin:8px 0 14px; }
-    .meta { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0; }
-    .pill { font-size:12px; padding:6px 8px; border-radius:999px; background:#102b4a; border:1px solid #28577f; }
-    .free { color:#dbffd8; border-color:#3e9e56; }
-    .score { position:absolute; right:14px; top:14px; color:#03101d; background:var(--green); padding:6px 9px; border-radius:10px; font-weight:900; font-size:12px; }
-    a.cta { display:inline-block; text-decoration:none; color:white; background:linear-gradient(90deg,#0878e8,#20a7ff); padding:10px 12px; border-radius:10px; font-weight:800; }
-    .path { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:10px; }
-    .step { border:1px solid var(--line); border-radius:14px; padding:12px; background:rgba(5,11,20,.55); }
-    .step b { color:var(--cyan); display:block; margin-bottom:6px; }
-    .empty { text-align:center; padding:28px; color:var(--muted); }
-    footer { color:var(--muted); text-align:center; padding:28px 16px; font-size:12px; }
-    @media(max-width:760px) { h1 { font-size:40px; } .searchbox, .filters, .grid, .stats, .path { grid-template-columns:1fr; } button { padding:14px 20px; } }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-<header>
-  <section class="hero">
-    <div class="brand"><div class="logo">🎓</div><div><h1>Wayne</h1><div class="tag">Seu assistente de cursos gratuitos</div></div></div>
-    <p class="pitch">Digite uma área, profissão ou habilidade. O Wayne busca na base inicial e organiza cursos gratuitos por relevância, certificado, nível e trilha de estudo.</p>
-    <div class="searchbox"><input id="searchInput" placeholder="Ex.: comunicação, enfermagem, Power BI, finanças, logística..." /><button id="searchBtn">Pesquisar</button></div>
+<header class="hero">
+  <nav class="nav">
+    <div class="brand"><div class="logo">🎓</div><div><strong>Wayne</strong><span>Elrod Corp</span></div></div>
+    <a href="#resultados" class="navlink">Resultados</a>
+  </nav>
+  <section class="hero-content">
+    <div>
+      <p class="eyebrow">MVP 0.3 • Buscador funcional</p>
+      <h1>Encontre cursos gratuitos para acelerar sua carreira.</h1>
+      <p class="pitch">Pesquise por área, profissão ou habilidade. O Wayne organiza resultados por relevância, certificado, nível e utilidade prática.</p>
+    </div>
+    <div class="search-card">
+      <label for="searchInput">O que você quer aprender?</label>
+      <div class="search-row">
+        <input id="searchInput" placeholder="Ex.: enfermagem, comunicação, Power BI..." />
+        <button id="searchBtn">Pesquisar</button>
+      </div>
+      <div id="chips" class="chips"></div>
+    </div>
   </section>
 </header>
+
 <main>
-  <div class="chips" id="chips"></div>
   <section class="stats">
     <div class="stat"><b id="totalCursos">0</b><span>cursos encontrados</span></div>
     <div class="stat"><b id="totalInstituicoes">0</b><span>instituições</span></div>
-    <div class="stat"><b id="totalGratuitos">0%</b><span>gratuitos/conteúdo livre</span></div>
+    <div class="stat"><b id="totalFavoritos">0</b><span>favoritos salvos</span></div>
     <div class="stat"><b id="wayneScore">0</b><span>Wayne Score médio</span></div>
   </section>
-  <section class="panel"><strong>Filtros</strong><div class="filters"><select id="areaFilter"><option value="">Todas as áreas</option></select><select id="nivelFilter"><option value="">Todos os níveis</option></select><select id="certFilter"><option value="">Todos os certificados</option></select></div></section>
-  <section class="panel" style="margin-top:16px;"><strong>Trilha Wayne recomendada</strong><div class="path"><div class="step"><b>1. Fundamento</b><span>Comece por base e linguagem.</span></div><div class="step"><b>2. Técnica</b><span>Escolha uma habilidade aplicável.</span></div><div class="step"><b>3. Ferramenta</b><span>Use software, dados ou método.</span></div><div class="step"><b>4. Portfólio</b><span>Crie evidências do que aprendeu.</span></div><div class="step"><b>5. Mercado</b><span>Conecte cursos com vagas reais.</span></div></div></section>
-  <h2 id="titleResults">Cursos em destaque</h2>
-  <section class="grid" id="results"></section>
+
+  <section class="panel filters">
+    <select id="areaFilter"><option value="">Todas as áreas</option></select>
+    <select id="nivelFilter"><option value="">Todos os níveis</option></select>
+    <select id="certFilter"><option value="">Todos os certificados</option></select>
+    <button id="clearBtn" class="ghost">Limpar</button>
+  </section>
+
+  <section class="panel path-panel">
+    <div>
+      <p class="eyebrow">Trilha Wayne</p>
+      <h2>Do curso ao mercado</h2>
+    </div>
+    <div class="path">
+      <div><b>1</b><span>Base</span></div>
+      <div><b>2</b><span>Técnica</span></div>
+      <div><b>3</b><span>Ferramenta</span></div>
+      <div><b>4</b><span>Portfólio</span></div>
+      <div><b>5</b><span>Vaga</span></div>
+    </div>
+  </section>
+
+  <section id="resultados">
+    <div class="section-title">
+      <h2 id="titleResults">Cursos em destaque</h2>
+      <span id="statusText">Base inicial Wayne</span>
+    </div>
+    <div id="results" class="grid"></div>
+  </section>
 </main>
-<footer>Wayne MVP 0.2 • Base inicial estática • Próxima etapa: banco maior, favoritos e integração com IA.</footer>
-<script>
-const cursos = [{"area": "BI e Dados", "curso": "Introdução à Análise de Dados – Microsoft Power BI", "instituicao": "Fundação Bradesco", "horas": "5h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://www.ev.org.br/cursos/introducao-a-analise-de-dados-microsoft-power-bi", "descricao": "Primeiros passos com análise de dados e Power BI."}, {"area": "BI e Dados", "curso": "Aplicação do Power BI para Aprimoramento da Gestão", "instituicao": "EV.G / ENAP", "horas": "25h", "nivel": "Intermediário", "certificado": "Gratuito", "link": "https://www.escolavirtual.gov.br/curso/840", "descricao": "Criação de relatórios, dashboards e indicadores de gestão."}, {"area": "Administração", "curso": "Aprender a Empreender", "instituicao": "Sebrae", "horas": "16h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://loja.sebrae.com.br/aprender-a-empreender-1-372000001028", "descricao": "Fundamentos de mercado, finanças e gestão."}, {"area": "Finanças", "curso": "Gestão Financeira", "instituicao": "Sebrae", "horas": "10h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://loja.sebrae.com.br/cursos/cursos-online", "descricao": "Controle financeiro, organização e tomada de decisão."}, {"area": "Finanças", "curso": "Controle da Movimentação Financeira", "instituicao": "Sebrae", "horas": "2h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://loja.sebrae.com.br/controle-da-movimentac-o-financeira-1-302000002221", "descricao": "Fluxo de caixa, entradas, saídas e controle básico."}, {"area": "Logística", "curso": "Logística e Compras Públicas", "instituicao": "EV.G / ENAP", "horas": "Variável", "nivel": "Intermediário", "certificado": "Gratuito", "link": "https://www.escolavirtual.gov.br/?id_tematica=39", "descricao": "Catálogo de cursos em logística, compras e cadeia de suprimentos."}, {"area": "Automação", "curso": "Automação de Processos através de RPA", "instituicao": "EV.G / ENAP", "horas": "25h", "nivel": "Intermediário", "certificado": "Gratuito", "link": "https://www.escolavirtual.gov.br/curso/797", "descricao": "Introdução à automação de processos para transformação digital."}, {"area": "Comunicação e Jornalismo", "curso": "Introdução à Comunicação na Era Digital", "instituicao": "FGV", "horas": "5h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/introducao-comunicacao-na-era-digital", "descricao": "Comunicação digital, marketing e construção de marcas."}, {"area": "Comunicação e Jornalismo", "curso": "Comunicação Empresarial", "instituicao": "Fundação Bradesco", "horas": "12h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://www.ev.org.br/cursos/comunicacao-empresarial", "descricao": "Comunicação profissional, escrita e postura corporativa."}, {"area": "Comunicação e Jornalismo", "curso": "Comunicação Escrita", "instituicao": "Fundação Bradesco", "horas": "16h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://www.ev.org.br/cursos/comunicacao_escrita", "descricao": "Ortografia, gramática e produção textual."}, {"area": "Comunicação e Jornalismo", "curso": "Primeiros passos para uso de Linguagem Simples", "instituicao": "EV.G / ENAP", "horas": "8h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://www.escolavirtual.gov.br/curso/315", "descricao": "Escrita pública clara, objetiva e acessível."}, {"area": "Comunicação e Jornalismo", "curso": "Marketing Digital e Redes Sociais", "instituicao": "Sebrae", "horas": "7h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://loja.sebrae.com.br/cursos/cursos-online", "descricao": "Estratégias de comunicação digital para negócios."}, {"area": "Comunicação e Jornalismo", "curso": "Comunicação, Planejamento e Convergência de Mídias", "instituicao": "FGV", "horas": "5h", "nivel": "Intermediário", "certificado": "Gratuito", "link": "https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/comunicacao-planejamento-e-convergencia-de-midias-1", "descricao": "Planejamento de comunicação integrada e mídias digitais."}, {"area": "Enfermagem", "curso": "Cursos UNA-SUS para Profissionais de Saúde", "instituicao": "UNA-SUS", "horas": "Variável", "nivel": "Variável", "certificado": "Gratuito", "link": "https://www.unasus.gov.br/cursos/", "descricao": "Catálogo oficial de cursos gratuitos para profissionais de saúde."}, {"area": "Enfermagem", "curso": "Segurança do Paciente nas Instituições de Saúde", "instituicao": "AVASUS / UFRN", "horas": "30h", "nivel": "Intermediário", "certificado": "Gratuito", "link": "https://avasus.ufrn.br/local/avasplugin/cursos/curso.php?id=243", "descricao": "Protocolos, riscos e qualidade no cuidado ao paciente."}, {"area": "Enfermagem", "curso": "Cofenplay+", "instituicao": "COFEN", "horas": "Variável", "nivel": "Variável", "certificado": "Gratuito", "link": "https://cofenplay.com.br/", "descricao": "Plataforma gratuita de atualização para enfermagem."}, {"area": "Enfermagem", "curso": "Pós-Tec Enfermagem", "instituicao": "COFEN", "horas": "360h", "nivel": "Avançado", "certificado": "Gratuito", "link": "https://postec.cofenplay.com.br/", "descricao": "Especialização gratuita para técnicos de enfermagem."}, {"area": "IA e Digital", "curso": "Google Ateliê Digital", "instituicao": "Google Skillshop", "horas": "40h", "nivel": "Iniciante", "certificado": "Gratuito", "link": "https://skillshop.exceedlms.com/sl/0db70a2e", "descricao": "Competências digitais, marketing, código e IA."}, {"area": "IA e Digital", "curso": "Microsoft Learn – Power Platform e IA", "instituicao": "Microsoft Learn", "horas": "Variável", "nivel": "Iniciante", "certificado": "Conteúdo gratuito", "link": "https://learn.microsoft.com/pt-br/training/", "descricao": "Trilhas oficiais Microsoft para tecnologia, dados e IA."}, {"area": "Busca Global", "curso": "Class Central – Buscador Global de Cursos", "instituicao": "Class Central", "horas": "Variável", "nivel": "Variável", "certificado": "Variável", "link": "https://www.classcentral.com/", "descricao": "Agregador global para encontrar cursos gratuitos em várias plataformas."}];
-const searchInput = document.getElementById('searchInput'), searchBtn = document.getElementById('searchBtn'), results = document.getElementById('results'), areaFilter = document.getElementById('areaFilter'), nivelFilter = document.getElementById('nivelFilter'), certFilter = document.getElementById('certFilter'), titleResults = document.getElementById('titleResults');
-function normalize(str) { return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
-function scoreCurso(c, term) { let score = 70; const text = normalize([c.area, c.curso, c.instituicao, c.descricao, c.nivel].join(' ')); const t = normalize(term); if (!t) score += 10; if (text.includes(t)) score += 20; if (normalize(c.certificado).includes('gratuito')) score += 8; if (c.instituicao.includes('FGV') || c.instituicao.includes('ENAP') || c.instituicao.includes('Bradesco') || c.instituicao.includes('COFEN') || c.instituicao.includes('UNA-SUS')) score += 7; return Math.min(score, 99); }
-function unique(arr) { return [...new Set(arr)].sort(); }
-function setup() { unique(cursos.map(c=>c.area)).forEach(a => areaFilter.innerHTML += `<option value="${a}">${a}</option>`); unique(cursos.map(c=>c.nivel)).forEach(n => nivelFilter.innerHTML += `<option value="${n}">${n}</option>`); unique(cursos.map(c=>c.certificado)).forEach(c => certFilter.innerHTML += `<option value="${c}">${c}</option>`); const chipBox = document.getElementById('chips'); unique(cursos.map(c=>c.area)).forEach(a => { const el = document.createElement('button'); el.className = 'chip'; el.textContent = a; el.onclick = () => { searchInput.value = a; areaFilter.value = a; render(); }; chipBox.appendChild(el); }); }
-function filtered() { const term = searchInput.value.trim(); return cursos.map(c => ({...c, score: scoreCurso(c, term)})).filter(c => { const text = normalize([c.area, c.curso, c.instituicao, c.descricao, c.nivel].join(' ')); const t = normalize(term); return (!t || text.includes(t)) && (!areaFilter.value || c.area === areaFilter.value) && (!nivelFilter.value || c.nivel === nivelFilter.value) && (!certFilter.value || c.certificado === certFilter.value); }).sort((a,b) => b.score - a.score); }
-function render() { const list = filtered(); const term = searchInput.value.trim(); titleResults.textContent = term ? `Resultados para: "${term}"` : 'Cursos em destaque'; const inst = unique(list.map(c=>c.instituicao)).length; const gratuitos = list.filter(c=>normalize(c.certificado).includes('gratuito') || normalize(c.certificado).includes('conteudo')).length; const avg = list.length ? Math.round(list.reduce((s,c)=>s+c.score,0)/list.length) : 0; document.getElementById('totalCursos').textContent = list.length; document.getElementById('totalInstituicoes').textContent = inst; document.getElementById('totalGratuitos').textContent = list.length ? Math.round((gratuitos/list.length)*100)+'%' : '0%'; document.getElementById('wayneScore').textContent = avg; if (!list.length) { results.innerHTML = `<div class="empty">Nenhum curso encontrado. Tente termos como comunicação, enfermagem, finanças, Power BI, logística ou IA.</div>`; return; } results.innerHTML = list.map(c => `<article class="course"><div class="score">${c.score}</div><h3>${c.curso}</h3><strong>${c.instituicao}</strong><p>${c.descricao}</p><div class="meta"><span class="pill">${c.area}</span><span class="pill">${c.horas}</span><span class="pill">${c.nivel}</span><span class="pill free">${c.certificado}</span></div><a class="cta" href="${c.link}" target="_blank" rel="noopener">Abrir curso ↗</a></article>`).join(''); }
-searchBtn.onclick = render; searchInput.addEventListener('keyup', render); [areaFilter, nivelFilter, certFilter].forEach(el => el.addEventListener('change', render)); setup(); render();
-</script>
+
+<footer>
+  <strong>Wayne</strong> • Cursos gratuitos • Próxima etapa: ampliar base, login e IA.
+</footer>
+
+<script src="js/app.js"></script>
 </body>
 </html>
