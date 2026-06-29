@@ -1,6 +1,7 @@
 window.WAYNE_DATA = {
   "profiles": [
     {
+      "id": "ia",
       "area": "Inteligência Artificial",
       "terms": [
         "ia",
@@ -10,19 +11,21 @@ window.WAYNE_DATA = {
         "prompt",
         "automação",
         "automacao",
-        "llm"
+        "llm",
+        "agente"
       ],
       "score": 96,
       "courses_total": 245,
       "providers_total": 12,
       "months": 4,
+      "growth": 245,
       "skills": [
         "Prompt Engineering",
         "Automação",
         "Python",
         "LLMs",
-        "Produtividade com IA",
-        "APIs"
+        "APIs",
+        "Produtividade com IA"
       ],
       "roles": [
         "Analista de IA",
@@ -31,37 +34,42 @@ window.WAYNE_DATA = {
         "Assistente de Inovação"
       ],
       "courses": [
-        [
-          "Microsoft Learn",
-          "Fundamentos de IA do Azure",
-          "Gratuito",
-          "Iniciante",
-          "https://learn.microsoft.com/pt-br/training/"
-        ],
-        [
-          "Google Skillshop",
-          "IA e produtividade digital",
-          "Gratuito",
-          "Iniciante",
-          "https://skillshop.withgoogle.com/"
-        ],
-        [
-          "Class Central",
-          "Artificial Intelligence Courses",
-          "Variável",
-          "Todos os níveis",
-          "https://www.classcentral.com/search?q=artificial%20intelligence"
-        ],
-        [
-          "ENAP",
-          "Transformação Digital e Governo",
-          "Gratuito",
-          "Iniciante",
-          "https://www.escolavirtual.gov.br/"
-        ]
+        {
+          "provider": "Microsoft Learn",
+          "title": "Fundamentos de IA do Azure",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "Variável",
+          "url": "https://learn.microsoft.com/pt-br/training/"
+        },
+        {
+          "provider": "Google Skillshop",
+          "title": "IA e produtividade digital",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "Variável",
+          "url": "https://skillshop.withgoogle.com/"
+        },
+        {
+          "provider": "Class Central",
+          "title": "Artificial Intelligence Courses",
+          "price": "Variável",
+          "level": "Todos os níveis",
+          "hours": "Variável",
+          "url": "https://www.classcentral.com/search?q=artificial%20intelligence"
+        },
+        {
+          "provider": "ENAP",
+          "title": "Transformação Digital e Governo",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "Variável",
+          "url": "https://www.escolavirtual.gov.br/"
+        }
       ]
     },
     {
+      "id": "powerbi",
       "area": "Power BI e Business Intelligence",
       "terms": [
         "power bi",
@@ -77,6 +85,7 @@ window.WAYNE_DATA = {
       "courses_total": 165,
       "providers_total": 9,
       "months": 4,
+      "growth": 165,
       "skills": [
         "Power BI",
         "DAX",
@@ -92,37 +101,42 @@ window.WAYNE_DATA = {
         "Analista Financeiro BI"
       ],
       "courses": [
-        [
-          "Fundação Bradesco",
-          "Introdução à Análise de Dados – Power BI",
-          "Gratuito",
-          "Iniciante",
-          "https://www.ev.org.br/cursos/introducao-a-analise-de-dados-microsoft-power-bi"
-        ],
-        [
-          "ENAP",
-          "Aplicação do Power BI para Aprimoramento da Gestão",
-          "Gratuito",
-          "Intermediário",
-          "https://www.escolavirtual.gov.br/curso/840"
-        ],
-        [
-          "Microsoft Learn",
-          "Power BI Learning Paths",
-          "Conteúdo gratuito",
-          "Todos os níveis",
-          "https://learn.microsoft.com/pt-br/training/powerplatform/power-bi"
-        ],
-        [
-          "Class Central",
-          "Power BI Courses",
-          "Variável",
-          "Todos os níveis",
-          "https://www.classcentral.com/search?q=power%20bi"
-        ]
+        {
+          "provider": "Fundação Bradesco",
+          "title": "Introdução à Análise de Dados – Power BI",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "5h",
+          "url": "https://www.ev.org.br/cursos/introducao-a-analise-de-dados-microsoft-power-bi"
+        },
+        {
+          "provider": "ENAP",
+          "title": "Aplicação do Power BI para Aprimoramento da Gestão",
+          "price": "Gratuito",
+          "level": "Intermediário",
+          "hours": "25h",
+          "url": "https://www.escolavirtual.gov.br/curso/840"
+        },
+        {
+          "provider": "Microsoft Learn",
+          "title": "Power BI Learning Paths",
+          "price": "Conteúdo gratuito",
+          "level": "Todos os níveis",
+          "hours": "Variável",
+          "url": "https://learn.microsoft.com/pt-br/training/powerplatform/power-bi"
+        },
+        {
+          "provider": "Class Central",
+          "title": "Power BI Courses",
+          "price": "Variável",
+          "level": "Todos os níveis",
+          "hours": "Variável",
+          "url": "https://www.classcentral.com/search?q=power%20bi"
+        }
       ]
     },
     {
+      "id": "dados",
       "area": "Ciência de Dados",
       "terms": [
         "dados",
@@ -138,6 +152,7 @@ window.WAYNE_DATA = {
       "courses_total": 180,
       "providers_total": 11,
       "months": 5,
+      "growth": 180,
       "skills": [
         "Python",
         "SQL",
@@ -153,37 +168,42 @@ window.WAYNE_DATA = {
         "Analytics Assistant"
       ],
       "courses": [
-        [
-          "Microsoft Learn",
-          "Fundamentos de dados",
-          "Conteúdo gratuito",
-          "Iniciante",
-          "https://learn.microsoft.com/pt-br/training/"
-        ],
-        [
-          "Class Central",
-          "Data Science Courses",
-          "Variável",
-          "Todos os níveis",
-          "https://www.classcentral.com/search?q=data%20science"
-        ],
-        [
-          "Fundação Bradesco",
-          "Análise de Dados com Power BI",
-          "Gratuito",
-          "Iniciante",
-          "https://www.ev.org.br/cursos/introducao-a-analise-de-dados-microsoft-power-bi"
-        ],
-        [
-          "ENAP",
-          "Ciência de Dados e Gestão Pública",
-          "Gratuito",
-          "Variável",
-          "https://www.escolavirtual.gov.br/"
-        ]
+        {
+          "provider": "Microsoft Learn",
+          "title": "Fundamentos de dados",
+          "price": "Conteúdo gratuito",
+          "level": "Iniciante",
+          "hours": "Variável",
+          "url": "https://learn.microsoft.com/pt-br/training/"
+        },
+        {
+          "provider": "Class Central",
+          "title": "Data Science Courses",
+          "price": "Variável",
+          "level": "Todos os níveis",
+          "hours": "Variável",
+          "url": "https://www.classcentral.com/search?q=data%20science"
+        },
+        {
+          "provider": "Fundação Bradesco",
+          "title": "Análise de Dados com Power BI",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "5h",
+          "url": "https://www.ev.org.br/cursos/introducao-a-analise-de-dados-microsoft-power-bi"
+        },
+        {
+          "provider": "ENAP",
+          "title": "Ciência de Dados e Gestão Pública",
+          "price": "Gratuito",
+          "level": "Variável",
+          "hours": "Variável",
+          "url": "https://www.escolavirtual.gov.br/"
+        }
       ]
     },
     {
+      "id": "direito",
       "area": "Direito Digital e Compliance",
       "terms": [
         "direito",
@@ -200,6 +220,7 @@ window.WAYNE_DATA = {
       "courses_total": 132,
       "providers_total": 8,
       "months": 4,
+      "growth": 91,
       "skills": [
         "LGPD",
         "Compliance",
@@ -215,37 +236,42 @@ window.WAYNE_DATA = {
         "Consultor LGPD Jr."
       ],
       "courses": [
-        [
-          "ENAP",
-          "Proteção de Dados Pessoais",
-          "Gratuito",
-          "Iniciante",
-          "https://www.escolavirtual.gov.br/"
-        ],
-        [
-          "ENAP",
-          "Licitações e Contratos Administrativos",
-          "Gratuito",
-          "Iniciante",
-          "https://www.escolavirtual.gov.br/"
-        ],
-        [
-          "FGV",
-          "Cursos gratuitos em Direito",
-          "Gratuito",
-          "Variável",
-          "https://educacao-executiva.fgv.br/cursos/gratuitos"
-        ],
-        [
-          "Senado Federal",
-          "Saberes",
-          "Gratuito",
-          "Variável",
-          "https://saberes.senado.leg.br/"
-        ]
+        {
+          "provider": "ENAP",
+          "title": "Proteção de Dados Pessoais",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "Variável",
+          "url": "https://www.escolavirtual.gov.br/"
+        },
+        {
+          "provider": "ENAP",
+          "title": "Licitações e Contratos Administrativos",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "Variável",
+          "url": "https://www.escolavirtual.gov.br/"
+        },
+        {
+          "provider": "FGV",
+          "title": "Cursos gratuitos em Direito",
+          "price": "Gratuito",
+          "level": "Variável",
+          "hours": "Variável",
+          "url": "https://educacao-executiva.fgv.br/cursos/gratuitos"
+        },
+        {
+          "provider": "Senado Federal",
+          "title": "Saberes",
+          "price": "Gratuito",
+          "level": "Variável",
+          "hours": "Variável",
+          "url": "https://saberes.senado.leg.br/"
+        }
       ]
     },
     {
+      "id": "contabilidade",
       "area": "Contabilidade e Controladoria",
       "terms": [
         "contador",
@@ -261,6 +287,7 @@ window.WAYNE_DATA = {
       "courses_total": 118,
       "providers_total": 7,
       "months": 5,
+      "growth": 78,
       "skills": [
         "Fiscal",
         "SPED",
@@ -276,37 +303,42 @@ window.WAYNE_DATA = {
         "Auditor Jr."
       ],
       "courses": [
-        [
-          "Sebrae",
-          "Gestão Financeira",
-          "Gratuito",
-          "Iniciante",
-          "https://loja.sebrae.com.br/cursos/cursos-online"
-        ],
-        [
-          "Sebrae",
-          "Controle da Movimentação Financeira",
-          "Gratuito",
-          "Iniciante",
-          "https://loja.sebrae.com.br/controle-da-movimentac-o-financeira-1-302000002221"
-        ],
-        [
-          "FGV",
-          "Cursos gratuitos em Finanças e Gestão",
-          "Gratuito",
-          "Variável",
-          "https://educacao-executiva.fgv.br/cursos/gratuitos"
-        ],
-        [
-          "Fundação Bradesco",
-          "Administração e Negócios",
-          "Gratuito",
-          "Variável",
-          "https://www.ev.org.br/areas-de-interesse/administracao-e-negocios"
-        ]
+        {
+          "provider": "Sebrae",
+          "title": "Gestão Financeira",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "10h",
+          "url": "https://loja.sebrae.com.br/cursos/cursos-online"
+        },
+        {
+          "provider": "Sebrae",
+          "title": "Controle da Movimentação Financeira",
+          "price": "Gratuito",
+          "level": "Iniciante",
+          "hours": "2h",
+          "url": "https://loja.sebrae.com.br/controle-da-movimentac-o-financeira-1-302000002221"
+        },
+        {
+          "provider": "FGV",
+          "title": "Cursos gratuitos em Finanças e Gestão",
+          "price": "Gratuito",
+          "level": "Variável",
+          "hours": "Variável",
+          "url": "https://educacao-executiva.fgv.br/cursos/gratuitos"
+        },
+        {
+          "provider": "Fundação Bradesco",
+          "title": "Administração e Negócios",
+          "price": "Gratuito",
+          "level": "Variável",
+          "hours": "Variável",
+          "url": "https://www.ev.org.br/areas-de-interesse/administracao-e-negocios"
+        }
       ]
     },
     {
+      "id": "logistica",
       "area": "Logística e Operações",
       "terms": [
         "logística",
@@ -322,6 +354,7 @@ window.WAYNE_DATA = {
       "courses_total": 96,
       "providers_total": 6,
       "months": 4,
+      "growth": 64,
       "skills": [
         "Estoque",
         "Compras",
@@ -337,34 +370,38 @@ window.WAYNE_DATA = {
         "Suprimentos"
       ],
       "courses": [
-        [
-          "ENAP",
-          "Logística e Compras Públicas",
-          "Gratuito",
-          "Intermediário",
-          "https://www.escolavirtual.gov.br/?id_tematica=39"
-        ],
-        [
-          "Sebrae",
-          "Cursos de gestão e operações",
-          "Gratuito",
-          "Variável",
-          "https://loja.sebrae.com.br/cursos/cursos-online"
-        ],
-        [
-          "Fundação Bradesco",
-          "Administração e Negócios",
-          "Gratuito",
-          "Variável",
-          "https://www.ev.org.br/areas-de-interesse/administracao-e-negocios"
-        ],
-        [
-          "Class Central",
-          "Supply Chain Courses",
-          "Variável",
-          "Todos os níveis",
-          "https://www.classcentral.com/search?q=supply%20chain"
-        ]
+        {
+          "provider": "ENAP",
+          "title": "Logística e Compras Públicas",
+          "price": "Gratuito",
+          "level": "Intermediário",
+          "hours": "Variável",
+          "url": "https://www.escolavirtual.gov.br/?id_tematica=39"
+        },
+        {
+          "provider": "Sebrae",
+          "title": "Cursos de gestão e operações",
+          "price": "Gratuito",
+          "level": "Variável",
+          "hours": "Variável",
+          "url": "https://loja.sebrae.com.br/cursos/cursos-online"
+        },
+        {
+          "provider": "Fundação Bradesco",
+          "title": "Administração e Negócios",
+          "price": "Gratuito",
+          "level": "Variável",
+          "hours": "Variável",
+          "url": "https://www.ev.org.br/areas-de-interesse/administracao-e-negocios"
+        },
+        {
+          "provider": "Class Central",
+          "title": "Supply Chain Courses",
+          "price": "Variável",
+          "level": "Todos os níveis",
+          "hours": "Variável",
+          "url": "https://www.classcentral.com/search?q=supply%20chain"
+        }
       ]
     }
   ],
@@ -454,33 +491,6 @@ window.WAYNE_DATA = {
     [
       "Machine Learning",
       4932
-    ]
-  ],
-  "tracks": [
-    [
-      "CIÊNCIA DE DADOS",
-      "Iniciante ao avançado",
-      67
-    ],
-    [
-      "INTELIGÊNCIA ARTIFICIAL",
-      "Do zero ao Pro",
-      42
-    ],
-    [
-      "POWER BI EXPERT",
-      "Dashboards profissionais",
-      58
-    ],
-    [
-      "UX / UI DESIGN",
-      "Design de experiências",
-      31
-    ],
-    [
-      "CYBERSECURITY",
-      "Proteja o futuro",
-      26
     ]
   ]
 };
