@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Wayne</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <svg class="batMini" viewBox="0 0 200 90" aria-label="Wayne mark">
+      <path fill="#fff" d="M5 10 L55 20 L76 2 L92 38 L100 18 L108 38 L124 2 L145 20 L195 10 L165 56 L128 48 L100 88 L72 48 L35 56 Z"/>
+    </svg>
+    <div class="navItem active">⌂</div>
+    <div class="navItem">⌁</div>
+    <div class="navItem">▥</div>
+    <div class="navItem">◇</div>
+    <div class="navItem">☆</div>
+    <div class="spacer"></div>
+    <div class="sideCard">
+      <small>WAYNE<br>SCORE</small>
+      <b id="sideScore">83</b>
+      <div class="miniBar"><div id="sideFill" class="miniFill"></div></div>
+      <small>Em evolução</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="round">◌</div>
+      <div class="round">≡</div>
+    </div>
+
+    <section class="hero">
+      <div class="today panel">
+        <div class="label">Pesquisas hoje</div>
+        <div><span class="numBig" id="todayNum">12.842</span><span class="up">↗ 18,7%</span></div>
+        <div class="muted">vs ontem</div>
+        <svg viewBox="0 0 280 76" width="100%" height="76">
+          <polyline fill="none" stroke="#8b38ff" stroke-width="4" points="0,58 24,55 46,63 70,42 92,40 116,50 140,26 164,36 188,18 212,34 236,27 260,20 280,8"/>
+          <polygon fill="rgba(139,56,255,.20)" points="0,76 0,58 24,55 46,63 70,42 92,40 116,50 140,26 164,36 188,18 212,34 236,27 260,20 280,8 280,76"/>
+        </svg>
+        <div class="muted">00h &nbsp; 06h &nbsp; 12h &nbsp; 18h &nbsp; 24h</div>
+      </div>
+
+      <div class="center">
+        <svg class="wLogo" viewBox="0 0 620 190">
+          <path fill="#fff" d="M30 40 L165 62 L225 20 L275 118 L310 52 L345 118 L395 20 L455 62 L590 40 L500 142 L405 130 L310 184 L215 130 L120 142 Z"/>
+        </svg>
+
+        <div class="headline">VOCÊ QUER.<span>NÓS TRAÇAMOS O CAMINHO.</span></div>
+
+        <div class="searchBox">
+          <input id="goal" placeholder="Conte onde você quer chegar..." />
+          <button class="go" id="searchBtn">➜</button>
+        </div>
+
+        <div class="chips">
+          <button class="chip" data-prompt="Quero mudar de carreira para dados">⚡ Mudar de carreira</button>
+          <button class="chip" data-prompt="Quero aprender inteligência artificial">⚡ Aprender IA</button>
+          <button class="chip" data-prompt="Quero trabalhar com Power BI">⚡ Power BI</button>
+          <button class="chip" data-prompt="Quero atuar com Direito Digital">⚡ Direito Digital</button>
+        </div>
+
+        <div class="orbit"></div>
+      </div>
+
+      <div class="right">
+        <div class="trendPanel panel">
+          <div class="label">🔥 Em alta agora</div>
+          <div id="trends"></div>
+        </div>
+        <div class="mapPanel panel">
+          <div class="label">Mapa de pesquisas</div>
+          <div class="map"><div class="brazil"></div></div>
+          <div id="states"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="kpi panel"><div class="label">📖 Cursos gratuitos</div><b id="kpiCourses">9.614</b><span class="muted">+ novos hoje</span></div>
+      <div class="kpi panel"><div class="label">🏛 Instituições</div><b id="kpiProviders">237</b><span class="muted">fontes ativas</span></div>
+      <div class="scoreCircle"><div><small>WAYNE<br>SCORE</small><b id="mainScore">83</b><p class="muted">compatibilidade</p></div></div>
+      <div class="kpi panel"><div class="label">🧬 Trilhas disponíveis</div><b>1.248</b><span class="muted">personalizadas</span></div>
+      <div class="kpi panel"><div class="label">🏅 Certificações</div><b>4.731</b><span class="muted">reconhecidas</span></div>
+    </section>
+
+    <section class="dashboard">
+      <div class="card panel">
+        <div class="label">Áreas mais buscadas</div>
+        <div class="donutWrap">
+          <div class="donut"></div>
+          <div>
+            <p>🔵 Tecnologia 32%</p>
+            <p>🟣 Dados 21%</p>
+            <p>🟡 Negócios 18%</p>
+            <p>🟢 Outros 10%</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card panel">
+        <div class="label">Tendências de busca</div>
+        <svg viewBox="0 0 420 200" width="100%" height="200">
+          <polyline fill="none" stroke="#8b38ff" stroke-width="4" points="0,140 40,112 80,125 120,90 160,96 200,70 240,82 280,58 320,62 360,42 420,22"/>
+          <polyline fill="none" stroke="#1c7cff" stroke-width="3" points="0,160 40,150 80,135 120,140 160,120 200,112 240,102 280,94 320,84 360,75 420,58"/>
+        </svg>
+      </div>
+
+      <div class="card panel">
+        <div class="label">Habilidades em alta</div>
+        <div id="skills"></div>
+      </div>
+    </section>
+
+    <section class="tracks">
+      <div class="label">Trilhas recomendadas</div>
+      <div class="trackGrid" id="tracks"></div>
+    </section>
+
+    <section class="result" id="result">
+      <div class="resultGrid">
+        <div class="card panel">
+          <div class="label">Rota encontrada</div>
+          <h2 id="areaTitle"></h2>
+          <p id="narrative"></p>
+          <div class="tags" id="tags"></div>
+        </div>
+        <div class="card panel">
+          <div class="label">Oportunidades</div>
+          <div class="tags" id="roles"></div>
+        </div>
+      </div>
+
+      <div class="card panel coursePanel">
+        <div class="label">Cursos e fontes recomendadas</div>
+        <div class="courseGrid" id="courses"></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
